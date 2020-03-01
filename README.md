@@ -10,6 +10,9 @@ The Arduino is connected to:
  
 The script has PyMata as dependecy. You can find the repo right [here](https://github.com/MrYsLab/PyMata "PyMata repo"), or you can download it directly thru pip
 
+### It's showtime
+[Here](project_complete.mp4) is a video of a setup that was used to probe this project right functioning
+
 ### Beware!!
 The Arduino is loaded with a modified version of the FirmataPlus program. The modification lies within the stepper library. This was made, because the stepper motor used is a 28BYJ-48 and the driver is a ULN2003.
 The driver is a darlington transistor array, so you need to send, from the Arduino, the right signal order so you can drive as you need the stepper motor. The Arduino is configured to use the full-step drive
