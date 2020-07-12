@@ -20,15 +20,15 @@ INP = 7			#entrada del boton entrada digital
 POTE = 0		#entrada del potenciometroentrada analogica
 
 #defino las variables para manipular las entradas/salidas
-servo_pos = 90			#posición inicial (en grados) del servo
-paso = 5				#paso en grados del servo
-stepCW = 50				#pasos que da el stepper por cada pulsación de boton
-						#o tecla en sentido horario
-stepCCW = -stepCW		#idem anterior pero en sentido antihorario
-manual = 0				#testigo de si el boton esta pulsado
-						#si esta pulsado, el servo se mueve con el potenciometro
-						#en el caso contrario, con los botones de la ventana
-						#o el teclado
+servo_pos = 90		#posición inicial (en grados) del servo
+paso = 5			#paso en grados del servo
+stepCW = 50			#pasos que da el stepper por cada pulsación de boton
+					#o tecla en sentido horario
+stepCCW = -stepCW	#idem anterior pero en sentido antihorario
+manual = 0			#testigo de si el boton esta pulsado
+					#si esta pulsado, el servo se mueve con el potenciometro
+					#en el caso contrario, con los botones de la ventana
+					#o el teclado
 
 def cb_entrada_h(data):
 	'''
@@ -138,7 +138,7 @@ class simple(Tkinter.Tk):
 		
 		#titulo e indicador de la lectura del potenciometro
 		self.lbl_titulo_pote = Tkinter.Label(self, text = "potenciometro")
-		self.lbl_titulo_pote.grid(column = 0, row = 2)#, sticky = 'EW')
+		self.lbl_titulo_pote.grid(column = 0, row = 2)
 		
 		self.lbl_pote = Tkinter.Label(self, textvariable = self.lbl_val_pote)
 		self.lbl_pote.grid(column = 0, row = 3)
@@ -161,7 +161,6 @@ class simple(Tkinter.Tk):
 		self.btn_serv_neg = Tkinter.Button(self, text = "servo -",
 										command = self.ser_men)
 		self.btn_serv_neg.grid(column = 4, row = 1)
-		#presionar la tecla de la flecha abajo, llama a la misma función ser_men
 		self.bind('<Down>', lambda e : self.ser_men())
 		
 		
