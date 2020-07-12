@@ -148,18 +148,18 @@ class simple(Tkinter.Tk):
 		#botones para mover el servo
 		self.lbl_titulo_servo = Tkinter.Label(self, text = "servo")
 		self.lbl_titulo_servo.grid(column = 3, row = 0, columnspan = 2,
-									sticky = 'EW')
+								   sticky = 'EW')
 		
 		#boton para incrementar el ángulo del servo
 		self.btn_serv_pos = Tkinter.Button(self, text = "servo +",
-										command = self.ser_mas)
+										   command = self.ser_mas)
 		self.btn_serv_pos.grid(column = 3, row = 1)
 		#presionar la tecla de la flecha arriba, llama a la misma función ser_mas
 		self.bind('<Up>', lambda e : self.ser_mas())
 		
 		#boton para decrementar el ángulo del servo
 		self.btn_serv_neg = Tkinter.Button(self, text = "servo -",
-										command = self.ser_men)
+										   command = self.ser_men)
 		self.btn_serv_neg.grid(column = 4, row = 1)
 		self.bind('<Down>', lambda e : self.ser_men())
 		
@@ -168,16 +168,16 @@ class simple(Tkinter.Tk):
 		#botones para mover el stepper
 		self.lbl_titulo_stepper = Tkinter.Label(self, text = "stepper")
 		self.lbl_titulo_stepper.grid(column = 3, row = 2, columnspan = 2,
-									sticky = 'EW')
+									 sticky = 'EW')
 		
 		#boton para girar el motor hacia la izquierda
 		self.btn_izq = Tkinter.Button(self, text = "izquierda",
-									command = self.izq)
+									  command = self.izq)
 		self.btn_izq.grid(column = 3, row = 3)
 		self.bind('<Left>', lambda e : self.izq())
 		
 		self.btn_der = Tkinter.Button(self, text = "derecha",
-									command = self. der)
+									  command = self. der)
 		self.btn_der.grid(column = 4, row = 3)
 		self.bind('<Right>', lambda e : self.der())
 		
