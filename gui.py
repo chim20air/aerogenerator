@@ -111,8 +111,8 @@ class simple(Tkinter.Tk):
 	Clase encargada del GUI del sistema
 	'''
 	def __init__(self, parent):
-		Tkinter.Tk.__init__(self, parent) #es el constructor
-		self.parent = parent #digo quien es el padre de la ventana
+		Tkinter.Tk.__init__(self, parent)
+		self.parent = parent
 		self.initialize()
 		
 	def initialize(self):
@@ -154,7 +154,6 @@ class simple(Tkinter.Tk):
 		self.btn_serv_pos = Tkinter.Button(self, text = "servo +",
 										   command = self.ser_mas)
 		self.btn_serv_pos.grid(column = 3, row = 1)
-		#presionar la tecla de la flecha arriba, llama a la misma función ser_mas
 		self.bind('<Up>', lambda e : self.ser_mas())
 		
 		#boton para decrementar el ángulo del servo
